@@ -163,7 +163,7 @@ function waitForHost() {
 
       // spawn enemies
       
-      for (let i = 0; i < 10; i++) {
+      for (let i = 0; i < 6; i++) {
         shared.enemies.push({
           x: random(180, width-180),
           y: random(0, -800),
@@ -331,8 +331,10 @@ function game() {
       fill(200, 0, 0);
       text("Press R to restart", width/2, 450);
       image(endScreen, width/2, height/2, 900, 900);
+      textSize(20);
       text("Your Score:", 200, 220);
-      text(shared.score, 200, 250);
+      textSize(40);
+      text(shared.score, 200, 270);
     
       shared.hostRestart = false;
     
@@ -343,8 +345,10 @@ function game() {
       }
     }else if (!partyIsHost()) {
       image(endScreen2, width/2, height/2, 900, 900);
+      textSize(20);
       text("Your Score:", 200, 220);
-      text(shared.score, 200, 250);
+      textSize(40);
+      text(shared.score, 200, 270);
       if (shared.hostRestart == true) {
         scene = 1;
       }

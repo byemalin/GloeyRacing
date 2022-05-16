@@ -8,6 +8,8 @@ let speedFont;
 let scene = 0;
 let songs = [];
 
+let globa
+
 
 
 
@@ -16,7 +18,7 @@ function preload() {
   speedFont = loadFont('Assets/fonts/GSPEED.otf');
   partyConnect(
     "wss://deepstream-server-1.herokuapp.com",
-    "spaceInvaders_Localrun8",
+    "gloeyracing1",
     "main1"
   );
   shared = partyLoadShared("globals");
